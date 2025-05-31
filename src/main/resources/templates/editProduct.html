@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Edit Here</h1>
+    
+	<h2 th:text="${msg}"></h2>
+
+    <form th:action="@{/updateProduct}" th:object="${product}" method="post">
+    
+    	ID: <input type="hidden" th:field="*{pid}" /><br><br>
+       NAME: <input type="text" th:field="*{name}" /> <br><br>
+		PRICE: <input type="text" th:field="*{price}" /> <br><br>
+		QUANTITY:<input type="text" th:field="*{qty}" /> <br><br>
+
+        <button type="submit">Update</button>
+        
+    </form>
+
+</body>
+</html>
